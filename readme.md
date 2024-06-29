@@ -1,8 +1,10 @@
-# Intalar tema
+# Mi tema personalizado de Oh-my-posh
 
-## En windwos
+## Intalar tema
 
-Abrir el archivo:
+### 1. PowerShell
+
+Ejecutar lo siguiente:
 
 `notepad $PROFILE`
 
@@ -13,3 +15,11 @@ Agregar las siguientes lineas:
 > Import-Module Terminal-Icons
 > Set-PSReadLineOption -PredictionViewStyle ListView
 > #-- Oh-my-posh
+
+### 2. Bash
+
+...
+
+## Aclaraciones del archivo .omp.json
+* Los bloques son las "areas" donde aparecerán los segmentos. Los bloques se puede alinear a la izquierda o derecha o hacer un salto de linea nuevo.
+* Los segmentos son las distintas informaciones a mostar. Ej: Usuario, path, hora, ram usada.
