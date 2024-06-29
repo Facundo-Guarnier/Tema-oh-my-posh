@@ -24,7 +24,7 @@ Ejecutar lo siguiente:
 
 Agregar las siguientes lineas:
 
->        #-- Oh-my-posh
+        #-- Oh-my-posh
         export OMP_CONFIGURE_SUDO=true
         export POWERLEVEL9K_MODE="awesome-fontconfig"
         export POWERLEVEL9K_AWESOME_FONT="ruta-de-la-fuente-.ttf"
