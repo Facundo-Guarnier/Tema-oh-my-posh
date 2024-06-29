@@ -1,4 +1,8 @@
-# Mi tema personalizado de Oh-my-posh
+# Tema personalizado de Oh-my-posh
+
+<div align="center">
+ <img src="https://github.com/Facundo-Guarnier/Tema-oh-my-posh/blob/main/Ejemplo.png" alt="Ejemplo" border-radius: 15px;>
+</div>
 
 ## Intalar tema
 
