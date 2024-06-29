@@ -10,11 +10,11 @@ Ejecutar lo siguiente:
 
 Agregar las siguientes lineas:
 
->#-- Oh-my-posh
-(@(& 'ruta-de-instalacion-oh-my-posh-.exe' init pwsh --config='ruta-del-tema-.omp.json' --print) -join "`n") | Invoke-Expression
-Import-Module Terminal-Icons
-Set-PSReadLineOption -PredictionViewStyle ListView
-#-- Oh-my-posh
+        #-- Oh-my-posh
+        (@(& 'ruta-de-instalacion-oh-my-posh-.exe' init pwsh --config='ruta-del-tema-.omp.json' --print) -join "`n") | Invoke-Expression
+        Import-Module Terminal-Icons
+        Set-PSReadLineOption -PredictionViewStyle ListView
+        #-- Oh-my-posh
 
 ### 2. Bash
 
@@ -24,12 +24,12 @@ Ejecutar lo siguiente:
 
 Agregar las siguientes lineas:
 
->#-- Oh-my-posh
-export OMP_CONFIGURE_SUDO=true
-export POWERLEVEL9K_MODE="awesome-fontconfig"
-export POWERLEVEL9K_AWESOME_FONT="ruta-de-la-fuente-.ttf"
-eval "$(oh-my-posh init bash --config ruta-del-tema-.omp.json)"
-#-- Oh-my-posh
+>        #-- Oh-my-posh
+        export OMP_CONFIGURE_SUDO=true
+        export POWERLEVEL9K_MODE="awesome-fontconfig"
+        export POWERLEVEL9K_AWESOME_FONT="ruta-de-la-fuente-.ttf"
+        eval "$(oh-my-posh init bash --config ruta-del-tema-.omp.json)"
+        #-- Oh-my-posh
 
 ## Aclaraciones del archivo .omp.json
 
