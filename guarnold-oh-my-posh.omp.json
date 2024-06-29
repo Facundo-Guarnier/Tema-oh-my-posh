@@ -1,0 +1,191 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+
+
+
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        { 
+          "name": "Icono del OS y tipo de Shell",
+          "background": "#d75f00",
+          "foreground": "#f2f3f8",
+          "properties": {
+            "alpine": "\uf300",
+            "arch": "\uf303",
+            "centos": "\uf304",
+            "debian": "\uf306",
+            "elementary": "\uf309",
+            "fedora": "\uf30a",
+            "gentoo": "\uf30d",
+            "linux": "\ue712",
+            "macos": "\ue711",
+            "manjaro": "\uf312",
+            "mint": "\uf30f",
+            "opensuse": "\uf314",
+            "raspbian": "\uf315",
+            "ubuntu": "\uf31c",
+            "windows": "\ue70f"
+          },
+          "style": "diamond",
+          "leading_diamond": "\u256d\u2500\ue0b6",
+          "template": " {{ .Icon }} {{ .Shell }} ",
+          "type": "os"
+        },
+
+        
+        
+        
+        {
+          "name": "Nombre del usuario",
+          "background": "#e4e4e4",
+          "foreground": "#000000",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "template": " {{ .UserName }} ",
+          "type": "session"
+        },
+        
+        
+        {
+          "name": "Git",
+          "type": "git",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "background": "#aeae00",
+          "foreground": "#000000",
+          "properties": {
+            "display_stash_count": true,
+            "display_upstream_icon": true,
+            "display_status": true,
+            "display_status_detail": true,
+            "branch_icon": "  ",
+            "branch_identical_icon": "≡",
+            "branch_ahead_icon": "↑",
+            "branch_behind_icon": "↓",
+            "branch_gone": "≢",
+            "local_working_icon": "",
+            "local_staged_icon": "",
+            "stash_count_icon": "",
+            "commit_icon": "▷ ",
+            "tag_icon": "▶ ",
+            "rebase_icon": "Ɫ ",
+            "cherry_pick_icon": "✓ ",
+            "merge_icon": "◴ ",
+            "no_commits_icon": "[no commits]",
+            "status_separator_icon": " │",
+            "status_colors_enabled": true,
+            "color_background": true
+          }
+        },
+
+
+        {
+          "name": "Entorno virtual de Python",
+          "background": "#325b39",
+          "foreground": "#ffffff",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+              "display_mode": "environment",
+              "fetch_virtual_env": true,
+              "home_enabled": true
+          },
+          "style": "powerline",
+          "template": " {{ if .Venv }}{{ .Venv }}{{ end }} ",
+          "type": "python"
+        },        
+        
+        
+
+
+        { 
+          "name": "Ruta actual",
+          "background": "#516BEB",
+          "foreground": "#f2f3f8",
+          "properties": {
+            "style": "agnoster_short",
+            "max_depth": 3,
+            "folder_icon": "\u2026",
+            "folder_separator_icon": " <transparent>\ue0b1</> "
+          },
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "trailing_diamond": "\ue0b4",
+          "template": " {{ .Path }} ",
+          "type": "path"
+        }
+        
+
+      ],
+      "type": "prompt"
+    },
+
+    {
+      "alignment": "right",
+      "segments": [
+
+
+        {
+          "name": "Uso de la RAM",
+          "background": "#516BEB",
+          "foreground": "#ffffff",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": "\ue266 RAM:{{ round .PhysicalPercentUsed .Precision }}% | {{ (div ((sub .PhysicalTotalMemory .PhysicalAvailableMemory)|float64) 1073741824.0) }}/{{ (div .PhysicalTotalMemory 1073741824.0) }}GB ",
+          "type": "sysinfo"
+        },
+
+        {
+          "name": "Tiempo de ejecución",
+          "background": "#e4e4e4",
+          "foreground": "#000000",
+          "properties": {
+            "style": "austin",
+            "always_enabled": true
+          },
+          "invert_powerline": true,
+          "style": "powerline",
+          "template": "\uf252 {{ .FormattedMs }}<#585858> </>",
+          "powerline_symbol": "\ue0b2",
+          "type": "executiontime"
+        },
+
+
+        {
+          "name": "Hora actual",
+          "background": "#d75f00",
+          "foreground": "#f2f3f8",
+          "properties": {
+            "time_format": "15:04:05"
+          },
+          "invert_powerline": true,
+          "style": "diamond",
+          "trailing_diamond": "\ue0b4",
+          "type": "time"
+        }
+
+
+
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "name": "Símbolo de la raíz",
+          "foreground": "#d75f00",
+          "style": "plain",
+          "template": "\u2570\u2500 {{ if .Root }}#{{else}}${{end}}",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}
